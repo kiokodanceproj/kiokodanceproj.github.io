@@ -56,6 +56,13 @@ h1, h2, h3, h4, h5, h6,
 main > section {
     padding: 70px 0;
 }
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
 
 .btn {
     border-radius: 0;
@@ -76,7 +83,9 @@ main > section {
     color: #fff;
     padding: 12px 35px;
 }
-
+.btn-download:before {
+	content:"\f019"
+}
 .bg-blue {
     background-color: #009EE3;
 }
@@ -958,10 +967,7 @@ ul.external li a:hover {
 
 .social-button li {
     display: inline-block;
-}
-
-.social-button li:nth-child(2) {
-    margin: 0 75px;
+    margin: 0 15px; /* Устанавливаем промежуток между всеми кнопками */
 }
 
 .social-button li a {
@@ -972,7 +978,7 @@ ul.external li a:hover {
     height: 90px;
     line-height: 96px;
     width: 90px;
-    
+
     -webkit-transition: all 0.2s ease 0s;
        -moz-transition: all 0.2s ease 0s;
         -ms-transition: all 0.2s ease 0s;
@@ -984,6 +990,7 @@ ul.external li a:hover {
     color: #008ECC;
     border: 2px solid #008ECC;
 }
+
 
 
 /*=================================================================

@@ -90,12 +90,16 @@ $(document).ready(function(){
 	jQuery('#nav').singlePageNav({
 		offset: jQuery('#nav').outerHeight(),
 		filter: ':not(.external)',
-		speed: 2000,
+		speed: 700,
 		currentClass: 'current',
-		easing: 'easeInOutExpo',
+		easing: 'easeOutQuint',
 		updateHash: true,
 		beforeStart: function() {
 			console.log('begin scrolling');
+			// Закрываем меню после выбора пункта при мобильном виде
+			if (jQuery('.navbar-toggle').is(':visible')) {
+				jQuery('.navbar-collapse').collapse('hide');
+			}
 		},
 		onComplete: function() {
 			console.log('done scrolling');
